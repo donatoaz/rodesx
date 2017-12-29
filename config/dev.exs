@@ -49,8 +49,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :rodes, Rodes.Repo,
   adapter: Tds.Ecto,
-  database: "DB_VIA_TESTE_2",
-  username: "***REMOVED***",
-  password: "***REMOVED***",
-  hostname: "***REMOVED***",
-  port: 33399
+  database: System.get_env("MSSQL_DB_NAME"),
+  username: System.get_env("MSSQL_UID"),
+  password: System.get_env("MSSQL_PWD"),
+  hostname: System.get_env("MSSQL_HST"),
+  port: System.get_env("MSSQL_PORT")
