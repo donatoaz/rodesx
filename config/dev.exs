@@ -30,6 +30,7 @@ config :rodes, Rodes.Endpoint,
 
 # Watch static and templates for browser reloading.
 config :rodes, Rodes.Endpoint,
+  http: [port: {:system, "PORT"}],
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},

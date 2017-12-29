@@ -1,0 +1,6 @@
+<%= if @product do %>
+    <h1><%=  @product.cpros %></h1>
+    <small><%= @product.dpros %></small>
+<%= else %>
+    <h1>Product not found</h1>
+<% end %>
