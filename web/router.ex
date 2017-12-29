@@ -15,7 +15,7 @@ defmodule Rodes.Router do
 
   scope "/", Rodes do
     pipe_through :browser # Use the default browser stack
-
+    
     get "/", PageController, :index
     
     resources "/products", ProductController, only: [:show]
